@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html manifest="/cache-manyfiles.manifest">
+<head>
+    <title></title>
+    <script type="text/javascript" src="files/jquery.js"></script>
+    <script type="text/javascript">
+
+        var start = new Date().getTime();
+
+        function handleCacheEvent(e) {
+            console.log('Downloaded');
+            'use strict';
+
+            $("#temp").attr('src', '/files/images/Resources.png');
+            var end = new Date().getTime();
+            var time = end - start;
+            console.log('Time:', time, 'ms');
+        }
+
+        var appCache = window.applicationCache;
+
+        // Fired when cache is downloaded
+        appCache.addEventListener('cached', handleCacheEvent, false);
+
+    </script>
+</head>
+<body>
+    <img src="" alt="asd" id="temp" />
+</body>
+</html>
