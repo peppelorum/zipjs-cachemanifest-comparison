@@ -9,7 +9,7 @@ Settings for Charles:
 * Latency: 50
 
 Configuration:
-* Manyfiles: 400 files a 70 KB each, 29.5 MB
+* Manyfiles: 400 files a 70 KB each, which gives a total of 29.5 MB
 * Zip file: all of the above files zipped, but since it was made with /dev/random the compression rate is ~0%. Zip file is 28.1 MB
 
 Results:
